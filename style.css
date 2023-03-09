@@ -20,7 +20,7 @@
 .island-name h1 {
     display: flex;
     position: absolute;
-    top: 10%;
+    top: 11%;
     left: 5%;
     color: white;
     font-size: xxx-large;
@@ -30,10 +30,11 @@
 .island-name h2 {
     display: flex;
     position: absolute;
-    top: 17%;
-    left: 13%;
+    top: 15%;
+    left: 8.5%;
     color: white;
-    padding-left: 8%;
+    padding-left: 10%;
+    font-size: medium;
 }
 
 .island-pg aside {
