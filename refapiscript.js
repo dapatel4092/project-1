@@ -33,16 +33,18 @@ fetch('https://the-fork-the-spoon.p.rapidapi.com/restaurants/v2/get-info?restaur
 
 
 
-    ****** dark sky weather forecast by longitude and latitude ( be sure to make a string for lat and long for each islands)
-    const options = {
-	method: 'GET',
+   *******
+   api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}   /// 
+   
+ const options = {
+	method: 'POST',
 	headers: {
 		'X-RapidAPI-Key': '86a7d58516msh89e2daf596b5b27p158c4bjsned74bb66b743',
-		'X-RapidAPI-Host': 'dark-sky.p.rapidapi.com'
+		'X-RapidAPI-Host': 'openweatherapp.p.rapidapi.com'
 	}
 };
 
-fetch('https://dark-sky.p.rapidapi.com/%7Blatitude%7D,%7Blongitude%7D?units=auto&lang=en', options)
+fetch('https://openweatherapp.p.rapidapi.com/', options)
 	.then(response => response.json())
 	.then(response => console.log(response))
-	.catch(err => console.error(err)); */
+	.catch(err => console.error(err));  */
