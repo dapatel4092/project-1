@@ -5,6 +5,8 @@
     scale: 100%;  
 }
 
+/* CSS for Header title and navbar */
+
 .header {
     padding: 10px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -19,6 +21,8 @@
 }
 
 .header nav {
+    display: flex;
+    justify-content: space-around;
     padding-right: 2%;
     padding-left: 2%;
     margin-top: 6px;
@@ -30,6 +34,24 @@
     border-radius: 25px;
 
 }
+
+
+/* CSS for Homepage with dropdown menu*/
+
+.content section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    
+}
+
+
+
+
+
+
+
 
 .island-pg {
     display: flex;
@@ -44,23 +66,30 @@
     width: 70%;
 }
 
-.island-name h1 {
+.island-name {
     display: flex;
+    align-items: flex-end;
     position: absolute;
-    padding-top: 2%;
-    padding-left: 2%;
+    flex-direction: column;
+    padding: 5%;
+
+
+}
+
+.island-name h1 {
     color: white;
     font-size: xxx-large;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .island-name h2 {
-    display: flex;
-    position: absolute;
-    padding-top: 5%;
     color: white;
-    padding-left: 15%;
     font-size: medium;
+    margin: 0;
+    padding: 0;
 }
 
 .island-pg aside {
