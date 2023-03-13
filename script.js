@@ -13,14 +13,15 @@ function getForecast(city){
     .then(apiData => 
         console.log(apiData)
     )
-
-var dropdown = document.querySelector('.dropdown');
-dropdown.addEventListener('click', function(event) {
-  event.stopPropagation();
-  dropdown.classList.toggle('is-active');
-});
-
 }
+
+    var dropdown = document.querySelector('.dropdown');
+    dropdown.addEventListener('click', function(event) {
+      event.stopPropagation();
+      dropdown.classList.toggle('is-active');
+    });
+
+
 
 let slideIndex = 1;
 showSlides(slideIndex);
