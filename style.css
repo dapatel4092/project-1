@@ -2,11 +2,34 @@
     background-color: lightgray;
     border-radius: 25px;
     margin: 1%;
-    scale: 100%;
-    
+    scale: 100%;  
 }
 
+.header {
+    padding: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #153442;
+    color: white;
+}
 
+.header h1 {
+    display: inline-block;
+    font-size: 24px;
+    margin-left: 12px;
+}
+
+.header nav {
+    padding-right: 2%;
+    padding-left: 2%;
+    margin-top: 6px;
+    margin-right: 12px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 25px;
+
+}
 
 .island-pg {
     display: flex;
@@ -24,8 +47,8 @@
 .island-name h1 {
     display: flex;
     position: absolute;
-    top: 11%;
-    left: 5%;
+    padding-top: 2%;
+    padding-left: 2%;
     color: white;
     font-size: xxx-large;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
@@ -34,10 +57,9 @@
 .island-name h2 {
     display: flex;
     position: absolute;
-    top: 15%;
-    left: 8.5%;
+    padding-top: 5%;
     color: white;
-    padding-left: 10%;
+    padding-left: 15%;
     font-size: medium;
 }
 

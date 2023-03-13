@@ -9,4 +9,4 @@ Hawaii
 Maldives
 Dalmation Islands- Croatia
 Aruba- Venezuela
-Isle of Sky- Scotland
+Isle of Skye - Scotland

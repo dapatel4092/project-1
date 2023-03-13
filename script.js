@@ -5,6 +5,7 @@ displayWeather.addEventListener('click',function(event){
     event.preventDefault()
 })
 
+
 function getForecast(city){
     var apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`
     fetch(apiUrl)
@@ -12,3 +13,11 @@ function getForecast(city){
     .then(apiData => 
         console.log(apiData)
     )
+
+var dropdown = document.querySelector('.dropdown');
+dropdown.addEventListener('click', function(event) {
+  event.stopPropagation();
+  dropdown.classList.toggle('is-active');
+});
+
+
