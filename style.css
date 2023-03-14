@@ -1,4 +1,4 @@
-.content {
+/*.content {
     background-color: lightgray;
     border-radius: 25px;
     margin: 1%;
@@ -38,17 +38,44 @@
 
 /* CSS for Homepage with dropdown menu*/
 
-.content section {
+.homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  flex-direction: column;
+  background-color: lightgray;
+  border-radius: 25px;
+  margin: 1%;
+  scale: 100%;
+}
+
+/*.content section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10%;
-    
+    padding: 1%;
+    flex-direction: column;
+    background-color: lightgray;
+    border-radius: 25px;
+    margin: 1%;
+    scale: 100%;     
+}*/
+
+.content section img {
+  margin: 0;
 }
 
+.dropdown {
+  display: flex;
+  position: absolute;
+  padding-top: 25%
+}
 
-
-
+.dropdown-item:hover {
+  background-color: lightblue;
+  cursor: grab;
+}
 
 
 
@@ -57,6 +84,10 @@
     display: flex;
     flex-wrap: wrap;
     padding: 1%;
+    background-color: lightgray;
+    border-radius: 25px;
+    margin: 1%;
+    scale: 100%;
 
 }
 
@@ -121,10 +152,6 @@
     display: flex;
     border-radius: 25px;
     padding-bottom: 0%;
-}
-
-.hide {
-    display: none;
 }
 
 * {box-sizing:border-box}
@@ -213,4 +240,8 @@
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+.hide {
+  display: none;
 }
