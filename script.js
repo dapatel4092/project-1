@@ -1,12 +1,9 @@
 var apiKey = "ad0f41660e1acc4acc6a263d5cc5a854"
 var displayWeather = document.getElementById('display-weather')
 
-
-
 displayWeather.addEventListener('click',function(event){
     event.preventDefault()
 })
-
 
 function getForecast(city){
     var apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`
@@ -28,12 +25,10 @@ function getForecast(city){
       var islandOrigin = document.getElementById('islandOrigin');
       var islandImage = document.getElementById('island-image');
 
-
       islandName.textContent = getIslandName(island).name;
       islandOrigin.textContent = getIslandName(island).origin;
       console.log(islandImage);
       islandImage.attributes.src.textContent = `/Images/${getIslandName(island).link}.jpg`
-
 
     }
 
@@ -46,7 +41,6 @@ function getForecast(city){
 
     })})
 
-
     function getIslandName(uglyName) {
       switch(uglyName) {
         case "#santorini":
@@ -57,7 +51,7 @@ function getForecast(city){
           };
           case "#koh-samui":
             return {
-              name: "Koh Sumui",
+              name: "Koh Samui",
               origin: "Thailand",
               link: "koh-samui-1"
             };
@@ -72,7 +66,6 @@ function getForecast(city){
       }
 
     }
-
 
 
 
@@ -104,23 +97,3 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-
-// Scripts for click functions to show/hide the different island pages
-
-function selectIslandSantorini() {
-  santorini.classList.remove('hide')
-  homepageId.classList.add('hide')
-}
-santoriniButton.addEventListener('click', selectIslandSantorini);
-
-function selectIslandKohSamui() {
-  kohSamui.classList.remove('hide')
-  homepageId.classList.add('hide')
-}
-kohSamuiButton.addEventListener('click', selectIslandKohSamui);
-
-//var items = document.getElementsByClassName('dropdown-item')
-
-$('.dropdown-menu').click(function(){
-  console.log('HEY!!!!');
-});
