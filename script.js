@@ -28,7 +28,7 @@ function getForecast(city){
       islandName.textContent = getIslandName(island).name;
       islandOrigin.textContent = getIslandName(island).origin;
       console.log(islandImage);
-      islandImage.attributes.src.textContent = `/Images/${getIslandName(island).link}.jpg`
+      islandImage.attributes.src.textContent = `./Images/${getIslandName(island).link}.jpg`
 
     }
 
