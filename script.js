@@ -1,6 +1,7 @@
 var apiKey = "ad0f41660e1acc4acc6a263d5cc5a854"
 var displayWeather = document.getElementById('display-weather')
 
+
 displayWeather.addEventListener('click',function(event){
     event.preventDefault()
 })
@@ -20,6 +21,56 @@ function getForecast(city){
       event.stopPropagation();
       dropdown.classList.toggle('is-active');
     });
+
+    function loadIsland(island) {
+      var islandName = document.getElementById('islandName');
+      var islandOrigin = document.getElementById('islandOrigin');
+      var islandImage = document.getElementById('island-image');
+
+
+      islandName.textContent = getIslandName(island).name;
+      islandOrigin.textContent = getIslandName(island).origin;
+      console.log(islandImage);
+      islandImage.attributes.src.textContent = `/Images/${getIslandName(island).link}.jpg`
+
+
+    }
+
+    
+    var islands = document.querySelectorAll('.dropdown-item');
+    islands.forEach(function(island){island.addEventListener('click', function(event) {
+      //console.log(event);
+      var name = this.attributes.href.value;
+      loadIsland(name)
+
+    })})
+
+
+    function getIslandName(uglyName) {
+      switch(uglyName) {
+        case "#santorini":
+          return {
+            name: "Santorini",
+            origin: "Greece",
+            link: "Santorini"
+          };
+          case "#koh-sumui":
+            return {
+              name: "Koh Sumui",
+              origin: "Thailand",
+              link: "koh-samui-1"
+            };
+            case "#the-azores":
+              return {
+                name: "The Azores",
+                origin: "Portugal",
+                link: "azores-1"
+              };
+              
+            default: "Not yet defined";
+      }
+
+    }
 
 
 
