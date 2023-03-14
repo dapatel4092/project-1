@@ -54,7 +54,7 @@ function getForecast(city){
             origin: "Greece",
             link: "Santorini"
           };
-          case "#koh-sumui":
+          case "#koh-samui":
             return {
               name: "Koh Sumui",
               origin: "Thailand",
@@ -66,7 +66,7 @@ function getForecast(city){
                 origin: "Portugal",
                 link: "azores-1"
               };
-              
+
             default: "Not yet defined";
       }
 
