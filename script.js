@@ -2,6 +2,7 @@ var apiKey = "ad0f41660e1acc4acc6a263d5cc5a854"
 var displayWeather = document.getElementById('display-weather')
 
 
+
 displayWeather.addEventListener('click',function(event){
     event.preventDefault()
 })
@@ -104,3 +105,22 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+// Scripts for click functions to show/hide the different island pages
+
+function selectIslandSantorini() {
+  santorini.classList.remove('hide')
+  homepageId.classList.add('hide')
+}
+santoriniButton.addEventListener('click', selectIslandSantorini);
+
+function selectIslandKohSamui() {
+  kohSamui.classList.remove('hide')
+  homepageId.classList.add('hide')
+}
+kohSamuiButton.addEventListener('click', selectIslandKohSamui);
+
+//var items = document.getElementsByClassName('dropdown-item')
+
+$('.dropdown-menu').click(function(){
+  console.log('HEY!!!!');
+});

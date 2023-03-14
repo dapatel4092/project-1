@@ -1,9 +1,11 @@
-.content {
+/*.content {
     background-color: lightgray;
     border-radius: 25px;
     margin: 1%;
     scale: 100%;  
 }
+
+/* CSS for Header title and navbar */
 
 .header {
     padding: 10px;
@@ -19,6 +21,8 @@
 }
 
 .header nav {
+    display: flex;
+    justify-content: space-around;
     padding-right: 2%;
     padding-left: 2%;
     margin-top: 6px;
@@ -31,10 +35,59 @@
 
 }
 
+
+/* CSS for Homepage with dropdown menu*/
+
+.homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  flex-direction: column;
+  background-color: lightgray;
+  border-radius: 25px;
+  margin: 1%;
+  scale: 100%;
+}
+
+/*.content section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    flex-direction: column;
+    background-color: lightgray;
+    border-radius: 25px;
+    margin: 1%;
+    scale: 100%;     
+}*/
+
+.content section img {
+  margin: 0;
+}
+
+.dropdown {
+  display: flex;
+  position: absolute;
+  padding-top: 25%
+}
+
+.dropdown-item:hover {
+  background-color: lightblue;
+  cursor: grab;
+}
+
+
+
+
 .island-pg {
     display: flex;
     flex-wrap: wrap;
     padding: 1%;
+    background-color: lightgray;
+    border-radius: 25px;
+    margin: 1%;
+    scale: 100%;
 
 }
 
@@ -44,23 +97,30 @@
     width: 70%;
 }
 
-.island-name h1 {
+.island-name {
     display: flex;
+    align-items: flex-end;
     position: absolute;
-    padding-top: 2%;
-    padding-left: 2%;
+    flex-direction: column;
+    padding: 5%;
+
+
+}
+
+.island-name h1 {
     color: white;
     font-size: xxx-large;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .island-name h2 {
-    display: flex;
-    position: absolute;
-    padding-top: 5%;
     color: white;
-    padding-left: 15%;
     font-size: medium;
+    margin: 0;
+    padding: 0;
 }
 
 .island-pg aside {
@@ -92,10 +152,6 @@
     display: flex;
     border-radius: 25px;
     padding-bottom: 0%;
-}
-
-.hide {
-    display: none;
 }
 
 * {box-sizing:border-box}
@@ -184,4 +240,8 @@
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+.hide {
+  display: none;
 }
