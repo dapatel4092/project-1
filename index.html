@@ -32,37 +32,37 @@
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
                   <div class="dropdown-content">
-                    <a href="#santorini" class="dropdown-item">
+                    <a href="#santorini" data-city="santorini" class="dropdown-item island-weather">
                       Santorini
                     </a>
                     <a class="dropdown-item">
                       
                     </a>
-                    <a href="#koh-samui" class="dropdown-item is-active">
+                    <a href="#koh-samui" data-city="" class="dropdown-item is-active island-weather ">
                       Koh Sumui
                     </a>
-                    <a href="#the-azores" class="dropdown-item">
+                    <a href="#the-azores" data-city="" class="dropdown-item island-weather">
                       The Azores
                     </a>
-                    <a href="#bali" class="dropdown-item">
+                    <a href="#bali" data-city="bali" class="dropdown-item">
                       Bali
                     </a>
-                    <a href="#galapagos" class="dropdown-item">
+                    <a href="#galapagos" data-city=""  class="dropdown-item">
                       Galapagos Islands
                     </a>
-                    <a href="#hawaii" class="dropdown-item">
+                    <a href="#hawaii" data-city="hawaii" class="dropdown-item">
                       Hawaii
                     </a>
-                    <a href="#maldives" class="dropdown-item">
+                    <a href="#maldives" data-city="maldives" class="dropdown-item">
                       The Maldives
                     </a>
-                    <a href="#dalmatian" class="dropdown-item">
+                    <a href="#dalmatian" data-city="" class="dropdown-item">
                       Dalmatian Islands
                     </a>
-                    <a href="#aruba" class="dropdown-item">
+                    <a href="#aruba" data-city="aruba"  class="dropdown-item">
                       Aruba
                     </a>
-                    <a href="#isle-of-skye" class="dropdown-item">
+                    <a href="#isle-of-skye"data-city=""  class="dropdown-item">
                       Isle of Skye
                     </a>
                   </div>
@@ -187,13 +187,37 @@
             
         </div>
         <section class="weather" id="weather-dashboard">
-          <button id="display-weather">click here to display 7 day forecast!</button>
+       
         
-
+          <button id="display-weather" class="js-modal-trigger button is-info is-large" data-city="santorini" data-target="modal-js-weather">
+              Weather forecast
+          </button>
         </section>
 
     </main>
-    <script src="script.js"></script>
+   
+<div id="modal-js-weather" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Modal title</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success">Done</button>
+      <button class="button">Cancel</button>
+    </footer>
+  </div>
+</div>
+<script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
+      integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
+      crossorigin="anonymous"
+    ></script>
+<script src="script.js"></script>
 
     
 </body>
