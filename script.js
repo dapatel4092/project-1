@@ -79,7 +79,6 @@ function getForecast(city){
               </div>
               <div class="media-content">
                 <p class="title">Temp:  ${apiData.list[i].main.temp}<span>°F</span></p>
-                
                 <p> Wind: ${apiData.list[i].wind.speed}MPH<p>
                 <p>Humidity: ${apiData.list[i].main.humidity}%<p>
               </div>
