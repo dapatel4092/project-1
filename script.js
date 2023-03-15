@@ -110,7 +110,7 @@ function getForecast(city){
       islandName.textContent = getIslandName(island).name;
       islandOrigin.textContent = getIslandName(island).origin;
       console.log(islandImage);
-      islandImage.attributes.src.textContent = `./Images/${getIslandName(island).link}.jpg`
+      islandImage.attributes.src.textContent = `./images/${getIslandName(island).link}.jpg`
 
     }
 
@@ -123,31 +123,74 @@ function getForecast(city){
 
     })})
 
-    function getIslandName(uglyName) {
-      switch(uglyName) {
-        case "#santorini":
-          return {
-            name: "Santorini",
-            origin: "Greece",
-            link: "Santorini"
-          };
-          case "#koh-samui":
-            return {
-              name: "Koh Samui",
-              origin: "Thailand",
-              link: "koh-samui-1"
-            };
-            case "#the-azores":
-              return {
-                name: "The Azores",
-                origin: "Portugal",
-                link: "azores-1"
-              };
+function getIslandName(uglyName) {
+  switch (uglyName) {
+    case "#santorini":
+      return {
+        name: "Santorini",
+        origin: "Greece",
+        link: "Santorini"
+      };
+    case "#koh-samui":
+      return {
+        name: "Koh Samui",
+        origin: "Thailand",
+        link: "koh-samui-1"
+      };
+    case "#the-azores":
+      return {
+        name: "The Azores",
+        origin: "Portugal",
+        link: "azores-main"
+      };
+    case "#bali":
+      return {
+        name: "Bali",
+        origin: "Indonesia",
+        link: "Bali/Bali-Main"
+      };
+    case "#galapagos":
+      return {
+        name: "Galapagos Islands",
+        origin: "Ecuador",
+        link: "galapagos-main"
+      };
+    case "#hawaii":
+      return {
+        name: "Hawaii",
+        origin: "United States",
+        link: "hawaii-main"
+      };
+    case "#maldives":
+      return {
+        name: "The Maldives",
+        origin: "Southeast Asia",
+        link: "maldives-main"
+      };
+    case "#dalmatian":
+      return {
+        name: "Dalmatian Islands",
+        origin: "Croatia",
+        link: "dalmatian-main"
+      };
+    case "#aruba":
+      return {
+        name: "Aruba",
+        origin: "Caribbean Sea",
+        link: "aruba-main"
+      };
+    case "#isle-of-skye":
+      return {
+        name: "Isle of Skye",
+        origin: "Scotland",
+        link: "IsleOfSkye/Skye-Main"
+        };
 
-            default: "Not yet defined";
-      }
 
-    }
+    default: "Not yet defined";
+  }
+
+}
 
 
 
