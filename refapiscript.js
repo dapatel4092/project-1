@@ -34,3 +34,10 @@ function getForecast(city){
     .then(apiData => 
         console.log(apiData)
     )}
+
+
+
+
+
+
+    

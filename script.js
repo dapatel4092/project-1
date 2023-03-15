@@ -126,11 +126,17 @@ function getForecast(city){
 
 function getIslandName(uglyName) {
   switch (uglyName) {
+    case "#homepage":
+      return {
+        name: "Get Ready For An Adventure",
+        origin: "Top 10 Island Destinations Worldwide",
+        link: "homepage"
+      };
     case "#santorini":
       return {
         name: "Santorini",
         origin: "Greece",
-        link: "Santorini"
+        link: "santorini"
       };
     case "#koh-samui":
       return {
