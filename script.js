@@ -237,7 +237,7 @@ function loadIsland(island) {
       image1.attributes.src.textContent = `./images/${getImage1(island).link}.jpg`
       image2.attributes.src.textContent = `./images/${getImage2(island).link}.jpg`
       image3.attributes.src.textContent = `./images/${getImage3(island).link}.jpg`
-
+    
       console.log(islandImage);
     
     }
@@ -252,12 +252,7 @@ function loadIsland(island) {
       
 
 
-    var coolIslands = document.querySelectorAll('.dropdown-item');
-    coolIslands.forEach(function(island){island.addEventListener('click',function(event) {
-      var name = this.attributes.href.value;
-      loadImage(name)
 
-    })})
 
     function getImage1(uglyName) {
       switch (uglyName) {
