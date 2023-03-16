@@ -250,7 +250,14 @@ function loadIsland(island) {
       loadIsland(name)
     })
   })
-      
+ 
+  var islands = document.querySelectorAll('.dropdown-item');
+  islands.forEach(function(island){island.addEventListener('click', function(event) {
+    //console.log(event);
+    var name = this.attributes.href.value;
+    loadImage(name)
+  })
+})
 
 
 
