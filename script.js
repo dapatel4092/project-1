@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(event.target)
     const modal = event.target.dataset.target;
     const $target = document.getElementById(modal);
-    console.log($target, "Modal",modal)
+    console.log($target, "Modal", modal)
     var city = event.target.dataset.city
     getForecast(city)
-  //  $trigger.addEventListener('click', () => {
-      openModal($target);
-  //  });
+    //  $trigger.addEventListener('click', () => {
+    openModal($target);
+    //  });
   });
 
   // Add a click event on various child elements to close the parent modal
@@ -45,30 +45,91 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-// for modal button //
+// for modal button weather ^ //
+
+
+
+// modal button for gifs \\
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Functions to open and close a modal
+  function openModal($el) {
+    $el.classList.add('is-active-gif');
+  }
+
+  function closeModal($el) {
+    $el.classList.remove('is-active-gif');
+  }
+
+  // function closeAllModals() {
+  //   (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+  //     closeModal($modal);
+  //   });
+  // }
+
+  // Add a click event on buttons to open a specific modal
+  document.querySelector('.js-modal-trigger-gif').addEventListener("click", (event) => {
+    console.log(event.target)
+    const modalg = event.target.dataset.target;
+    const $target = document.getElementById(modalg);
+    console.log($target, "Modal-gif", modalg)
+    var gifCity = event.target.dataset.gifCity
+    getGif(gifCity)
+    //  $trigger.addEventListener('click', () => {
+    openModal($target);
+    //  });
+  });
+
+  // Add a click event on various child elements to close the parent modal
+  (document.querySelectorAll('.modal-background-gif, .modal-close-gif, .modal-card-head-gif .delete-gif, .modal-card-foot-gif .button-gif') || []).forEach(($close) => {
+    const $target = $close.closest('.modal-gif');
+
+    $close.addEventListener('click', () => {
+      closeModal($target);
+    });
+  });
+
+  // Add a keyboard event to close all modals
+  document.addEventListener('keydown', (event) => {
+    const e = event || window.event;
+
+    if (e.keyCode === 27) { // Escape key
+      closeAllModals();
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
 
 
 var apiKey = "ad0f41660e1acc4acc6a263d5cc5a854"
 var displayWeather = document.querySelectorAll('.island-weather')
-displayWeather.forEach(element => element.addEventListener("click",islandButtonClick))
-function islandButtonClick(event){
-    event.preventDefault()
-    var city = this.getAttribute("data-city")
-    console.log(city, "CITY",event.target.getAttribute("data-city"))
-    document.getElementById("display-weather").setAttribute("data-city",city)
-    
+displayWeather.forEach(element => element.addEventListener("click", islandButtonClick))
+function islandButtonClick(event) {
+  event.preventDefault()
+  var city = this.getAttribute("data-city")
+  console.log(city, "CITY", event.target.getAttribute("data-city"))
+  document.getElementById("display-weather").setAttribute("data-city", city)
+
 }
 
-function getForecast(city){
-    var apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`
-    fetch(apiUrl)
-    .then( response => response.json())
+function getForecast(city) {
+  var apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`
+  fetch(apiUrl)
+    .then(response => response.json())
     .then(apiData => {
-        console.log(apiData)
-        document.querySelector(".modal-card-title").textContent = city
-        var weatherCards = ""
-        for(i = 0 ; i < apiData.list.length; i = i+8){
-          weatherCards += `<div class="card">
+      console.log(apiData)
+      document.querySelector(".modal-card-title").textContent = city
+      var weatherCards = ""
+      for (i = 0; i < apiData.list.length; i = i + 8) {
+        weatherCards += `<div class="card">
           
           <div class="card-content">
             <div class="media">
@@ -91,38 +152,85 @@ function getForecast(city){
             </div>
           </div>
         </div>`
-        }
-        document.querySelector(".modal-card-body").innerHTML = weatherCards
-})
+      }
+      document.querySelector(".modal-card-body").innerHTML = weatherCards
+    })
 }
 
-    var dropdown = document.querySelector('.dropdown');
-    dropdown.addEventListener('click', function(event) {
-      event.stopPropagation();
-      dropdown.classList.toggle('is-active');
-   
-    });
+var dropdown = document.querySelector('.dropdown');
+dropdown.addEventListener('click', function (event) {
+  event.stopPropagation();
+  dropdown.classList.toggle('is-active');
 
-    function loadIsland(island) {
-      var islandName = document.getElementById('islandName');
-      var islandOrigin = document.getElementById('islandOrigin');
-      var islandImage = document.getElementById('island-image');
+});
+// gif api functions//
 
-      islandName.textContent = getIslandName(island).name;
-      islandOrigin.textContent = getIslandName(island).origin;
-      console.log(islandImage);
-      islandImage.attributes.src.textContent = `./images/${getIslandName(island).link}.jpg`
 
-    }
+var gifKey = "xpOgvJ3jU5vHaBzkW8YgHN29mZgdxNTU"
+var displayGifs = document.querySelectorAll('.gif')
+displayGifs.forEach(element => element.addEventListener("click", islandButtonClickg))
+function islandButtonClickg(event) {
+  event.preventDefault()
+  var gifCity = this.getAttribute("gif-city")
+  console.log(gifCity, "CITY", event.target.getAttribute("gif-city"))
+  document.getElementById("display-gif").setAttribute("gif-city", gifCity)
+}
 
-    
-    var islands = document.querySelectorAll('.dropdown-item');
-    islands.forEach(function(island){island.addEventListener('click', function(event) {
-      //console.log(event);
-      var name = this.attributes.href.value;
-      loadIsland(name)
+function getGif(gifCity) {
+  var gapiUrl = `
+      https://api.giphy.com/v1/gifs/search?api_key=${gifKey}&q=${gifCity}&limit=5&offset=0&rating=pg&lang=en`
+  fetch(gapiUrl)
+    .then(response => response.json())
+    .then(apiDatag => {
+      console.log(apiDatag)
+      document.querySelector(".modal-card-title-gif").textContent = gifCity
+      var gifCard = ""
+      for (i = 0; i < apiDatag.list; i = i++) {
+        gifCard += `<div class= "card-gif">
+          <div class = "card-content-gif">
+            <div class = "media-gif"
+              <media class = "main-content"> img src = ${content.apiDatag[i].images.url}
+            </div>
 
-    })})
+          
+              
+          
+
+            
+            </div>`
+
+      }
+    })
+}
+
+
+
+
+
+
+
+function loadIsland(island) {
+  var islandName = document.getElementById('islandName');
+  var islandOrigin = document.getElementById('islandOrigin');
+  var islandImage = document.getElementById('island-image');
+
+  islandName.textContent = getIslandName(island).name;
+  islandOrigin.textContent = getIslandName(island).origin;
+  console.log(islandImage);
+  islandImage.attributes.src.textContent = `./images/${getIslandName(island).link}.jpg`
+
+}
+
+
+var islands = document.querySelectorAll('.dropdown-item');
+islands.forEach(function (island) {
+  island.addEventListener('click', function (event) {
+    //console.log(event);
+    var name = this.attributes.href.value;
+    loadIsland(name)
+
+  })
+})
 
 function getIslandName(uglyName) {
   switch (uglyName) {
@@ -190,8 +298,10 @@ function getIslandName(uglyName) {
       return {
         name: "Isle of Skye",
         origin: "Scotland",
+
         link: "Skye-Main"
         };
+
 
 
     default: "Not yet defined";
@@ -218,16 +328,16 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }
 
 
