@@ -10,13 +10,12 @@
 </head>
 <body>
     <header class="header">
-            <h1>Island Destinations</h1>
-            <nav>
-              <ul>
-                  
-                  <a href="#history">History</a>
-              </ul>
-          </nav>
+            <h1>Island Vacation Destinations</h1>
+            <div id="wishlist">
+              <h2 id="listText">Wishlist:</h2>
+              <textarea id="wishListInput" rows="3"></textarea>
+              <button class="saveBtn">Save</button>
+            </div>
         </header>
     
     <main class="content">
@@ -24,7 +23,7 @@
             <div class="dropdown">
                 <div class="dropdown-trigger">
                   <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                    <span>CLICK ME Start Your Island Adventure!</span>
+                    <span>CLICK HERE To Start Your Island Adventure!</span>
                     <span class="icon is-small">
                       <i class="fas fa-angle-down" aria-hidden="true"></i>
                     </span>
@@ -32,40 +31,43 @@
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
                   <div class="dropdown-content">
-                    <a href="#homepage" class="dropdown-item">
+                    <a href="#homepage" class="dropdown-item " >
                       Homepage
                     </a>
-                                 
-                    <a href="#santorini" data-city="santorini" class="dropdown-item island-weather">
+
+                    <a class="dropdown-item"></a>             
+                    
+                    <a href="#santorini" data-city="santorini" gif-city="Santorini" class="dropdown-item island-weather gif">
+
                         Santorini
                     </a>
                     
-                    <a href="#koh-samui" data-city="Thailand" class="dropdown-item island-weather ">
+                    <a href="#koh-samui" data-city="Thailand" gif-city="Thailand" class="dropdown-item island-weather gif ">
 
                       Koh Sumui
                     </a>
-                    <a href="#the-azores" data-city="Horta" class="dropdown-item island-weather">
+                    <a href="#the-azores" data-city="Horta" gif-city="Island"  class="dropdown-item island-weather gif">
                       The Azores
                     </a>
-                    <a href="#bali" data-city="Bali" class="dropdown-item island-weather">
+                    <a href="#bali" data-city="Bali" gif-city="Bali" class="dropdown-item island-weather gif">
                       Bali
                     </a>
-                    <a href="#galapagos" data-city="Guayaquil"  class="dropdown-item island-weather">
+                    <a href="#galapagos" data-city="Guayaquil" gif-city="tropical" class="dropdown-item island-weather gif">
                       Galapagos Islands
                     </a>
-                    <a href="#hawaii" data-city="Hawaii" class="dropdown-item island-weather">
+                    <a href="#hawaii" data-city="Hawaii" gif-city="Hawaii" class="dropdown-item island-weather gif">
                       Hawaii
                     </a>
-                    <a href="#maldives" data-city="Maldives" class="dropdown-item island-weather">
+                    <a href="#maldives" data-city="Maldives" gif-city="Maldives" class="dropdown-item island-weather gif">
                       The Maldives
                     </a>
-                    <a href="#dalmatian" data-city="Dalmatia" class="dropdown-item island-weather">
+                    <a href="#dalmatian" data-city="Dalmatia" gif-city="" class="dropdown-item island-weather gif">
                       Dalmatian Islands
                     </a>
-                    <a href="#aruba" data-city="aruba"  class="dropdown-item island-weather">
+                    <a href="#aruba" data-city="aruba" gif-city="Aruba"  class="dropdown-item island-weather gif">
                       Aruba
                     </a>
-                    <a href="#isle-of-skye"data-city="Portree"  class="dropdown-item island-weather">
+                    <a href="#isle-of-skye"data-city="Portree" gif-city="Scotland"  class="dropdown-item island-weather gif">
                       Isle of Skye
                     </a>
                   </div>
@@ -117,7 +119,7 @@
 </div>
               
               <div class="welcomeText">Welcome to Santorini!</div>
-              <div class="islandText">Santorini has become one of the most popular island destinations worldwide.</div>
+              <div class="islandText">Santorini is a fantastic island located in the Aegean Sea. It is  most known for its impressive volcanic scenery and world-famous sunsets.</div>
             </aside>
 
         </div>
@@ -207,6 +209,12 @@
               Weather forecast
           </button>
         </section>
+        <section class="gif" id="gif-dashboard">
+
+          <button id="display-gif" class="js-modal-trigger-gif button is-info is-large" gif-city="island" data-target="modal-js-gif">
+            click me for some Gifs!
+          </button>
+        </section>
 
     </main>
    
@@ -225,7 +233,31 @@
       <button class="button">Cancel</button>
     </footer>
   </div>
+   </div>
+
+<div id="modal-js-gif" class="modal-gif">
+  <div class="modal-background-gif"></div>
+  <div class="modal-card-gif">
+    <header class="modal-card-head-gif">
+      <p class="modal-card-title-gif">Gifs!</p>
+      <button class="delete-gif" aria-label="close-gif"></button>
+    </header>
+    <section class="modal-card-body-gif">
+      <!-- Content ... -->
+    </section>
+    <footer class="modal-card-foot-gif">
+      <button class="button is-success">Done</button>
+      <button class="button-gif">Cancel</button>
+    </footer>
+  </div>
 </div>
+
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
 <script
       src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
       integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
