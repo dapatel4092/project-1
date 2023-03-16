@@ -10,13 +10,12 @@
 </head>
 <body>
     <header class="header">
-            <h1>Island Destinations</h1>
-            <nav>
-              <ul>
-                  <a href="#home">Home</a>
-                  <a href="#history">History</a>
-              </ul>
-          </nav>
+            <h1>Island Vacation Destinations</h1>
+            <div id="wishlist">
+              <h2 id="listText">Wishlist:</h2>
+              <textarea id="wishListInput" rows="3"></textarea>
+              <button class="saveBtn">Save</button>
+            </div>
         </header>
     
     <main class="content">
@@ -24,7 +23,7 @@
             <div class="dropdown">
                 <div class="dropdown-trigger">
                   <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                    <span>ClICK ME Start Your Island Adventure!</span>
+                    <span>CLICK ME Start Your Island Adventure!</span>
                     <span class="icon is-small">
                       <i class="fas fa-angle-down" aria-hidden="true"></i>
                     </span>
@@ -35,9 +34,11 @@
                     <a href="#homepage" class="dropdown-item " >
                       Homepage
                     </a>
+
                     <a class="dropdown-item"></a>             
                     
-                    <a href="#santorini" data-city="santorini" gif-city="Sanotrini" class="dropdown-item island-weather gif">
+                    <a href="#santorini" data-city="santorini" gif-city="Santorini" class="dropdown-item island-weather gif">
+
                         Santorini
                     </a>
                     
@@ -153,7 +154,7 @@
 
         <div class="island-pg hide" id="bali">
             <h2>Bali</h2>
-            <img src="./images/Bali/Bali-Main.jpg">
+            <img src="./images/Bali-Main.jpg">
             <p>Known as the Island of the Gods, Bali is a tropical paradise that has much to offer! Lush vegetation, ancient temples, magical sunsets, idyllic beaches and some of the best hotels in the world are among the island's most attractive features.</p>
             
         </div>
@@ -197,7 +198,7 @@
 
             <h2>The Isle of Skye</h2>
 
-            <img src="./images/IsleOfSkye/Skye-Main.jpg">
+            <img src="./images/Skye-Main.jpg">
             <p>The rugged and remote Isle of Skye offers some of Scotland's best scenery and never fails to charm its visitors. Dramatic cliffsides, medieval castles, and picturesque fishing villages </p>
             
         </div>
@@ -251,7 +252,11 @@
   </div>
 </div>
 
+
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 <script
       src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
