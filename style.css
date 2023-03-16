@@ -74,6 +74,12 @@
 
 }
 
+.button {
+  background-color: lightskyblue;
+  font-weight: bold;
+
+}
+
 .images {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
