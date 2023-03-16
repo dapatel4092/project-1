@@ -10,13 +10,12 @@
 </head>
 <body>
     <header class="header">
-            <h1>Island Destinations</h1>
-            <nav>
-              <ul>
-                  <a href="#home">Home</a>
-                  <a href="#history">History</a>
-              </ul>
-          </nav>
+            <h1>Island Vacation Destinations</h1>
+            <div id="wishlist">
+              <h2 id="listText">Wishlist:</h2>
+              <textarea id="wishListInput" rows="3"></textarea>
+              <button class="saveBtn">Save</button>
+            </div>
         </header>
     
     <main class="content">
@@ -24,7 +23,7 @@
             <div class="dropdown">
                 <div class="dropdown-trigger">
                   <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                    <span>ClICK ME Start Your Island Adventure!</span>
+                    <span>CLICK HERE To Start Your Island Adventure!</span>
                     <span class="icon is-small">
                       <i class="fas fa-angle-down" aria-hidden="true"></i>
                     </span>
@@ -32,37 +31,43 @@
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
                   <div class="dropdown-content">
-                    <a href="#santorini" class="dropdown-item">
-                      Santorini
+                    <a href="#homepage" class="dropdown-item " >
+                      Homepage
                     </a>
-                    <a class="dropdown-item">
-                      
+
+                    <a class="dropdown-item"></a>             
+                    
+                    <a href="#santorini" data-city="santorini" gif-city="Santorini" class="dropdown-item island-weather gif">
+
+                        Santorini
                     </a>
-                    <a href="#koh-samui" class="dropdown-item is-active">
+                    
+                    <a href="#koh-samui" data-city="Thailand" gif-city="Thailand" class="dropdown-item island-weather gif ">
+
                       Koh Sumui
                     </a>
-                    <a href="#the-azores" class="dropdown-item">
+                    <a href="#the-azores" data-city="Horta" gif-city="Island"  class="dropdown-item island-weather gif">
                       The Azores
                     </a>
-                    <a href="#bali" class="dropdown-item">
+                    <a href="#bali" data-city="Bali" gif-city="Bali" class="dropdown-item island-weather gif">
                       Bali
                     </a>
-                    <a href="#galapagos" class="dropdown-item">
+                    <a href="#galapagos" data-city="Guayaquil" gif-city="tropical" class="dropdown-item island-weather gif">
                       Galapagos Islands
                     </a>
-                    <a href="#hawaii" class="dropdown-item">
+                    <a href="#hawaii" data-city="Hawaii" gif-city="Hawaii" class="dropdown-item island-weather gif">
                       Hawaii
                     </a>
-                    <a href="#maldives" class="dropdown-item">
+                    <a href="#maldives" data-city="Maldives" gif-city="Maldives" class="dropdown-item island-weather gif">
                       The Maldives
                     </a>
-                    <a href="#dalmatian" class="dropdown-item">
+                    <a href="#dalmatian" data-city="Dalmatia" gif-city="" class="dropdown-item island-weather gif">
                       Dalmatian Islands
                     </a>
-                    <a href="#aruba" class="dropdown-item">
+                    <a href="#aruba" data-city="aruba" gif-city="Aruba"  class="dropdown-item island-weather gif">
                       Aruba
                     </a>
-                    <a href="#isle-of-skye" class="dropdown-item">
+                    <a href="#isle-of-skye"data-city="Portree" gif-city="Scotland"  class="dropdown-item island-weather gif">
                       Isle of Skye
                     </a>
                   </div>
@@ -71,12 +76,12 @@
 
         </div>
 
-        <div class="island-pg" id="santorini">
+        <div class="island-pg" id="homepage">
             <div class="island-name">
-              <h1 id="islandName">Santorini</h1>
-              <h2 id="islandOrigin">Greece</h2>
+              <h1 id="islandName">Get Ready For An Adventure</h1>
+              <h2 id="islandOrigin">Top 10 Island Destinations Worldwide</h2>
             </div>
-            <img id="island-image" src="./Images/Santorini.jpg" class="images">
+            <img id="island-image" src="./Images/homepage.jpg" class="images">
             <aside class="aside">
               <!-- Slideshow container -->
 <div class="slideshow-container">
@@ -84,20 +89,20 @@
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
-    <img src="/images/santorini-1.jpg" style="width:100%">
-    <div class="text">Caption Text</div>
+    <img id="image1" src="" class="slideshow-image" style="width:100%">
+    <div class="text"></div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img src="/images/santorini-2.jpg" style="width:100%">
-    <div class="text">Caption Two</div>
+    <img id="image2" src="" class="slideshow-image" style="width:100%">
+    <div class="text"></div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <img src="" style="width:100%">
-    <div class="text">Caption Three</div>
+    <img id="image3" src="" class="slideshow-image" style="width:100%">
+    <div class="text"></div>
   </div>
 
   <!-- Next and previous buttons -->
@@ -113,15 +118,27 @@
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
               
-              <p class="welcomeText">Welcome to Santorini!</p>
-              <p class="islandText">Santorini has become one of the most popular island destinations worldwide.</p>
+              <div class="welcomeText"></div>
+              <div class="islandText"></div>
             </aside>
 
         </div>
 
+        <div class="island-pg hide" id="homepage">
+            <h2>Get Ready For An Adventure</h2>
+            <img src="./Images/homepage.jpg">
+            <p>Top 10 Island Destinations Worldwide</p>
+        </div>
+
+        <div class="island-pg hide" id="santorini">
+            <h2>Santorini</h2>
+            <img src="./Images/Santorini.jpg">
+            <p>Santorini has become one of the most popular island destinations worldwide.</p>
+        </div>
+
         <div class="island-pg hide" id="koh-samui">
             <h2>Koh Samui</h2>
-            <img src="./images/koh-samui-main.jpg">
+            <img src="./Images/koh-samui-main.jpg">
             <p>This breathtaking island has beautiful beaches, spectacular viewpoints, waterfalls, temples and several world class spas. It has a wide range of visitors, from people trying to stay on a budget in bungalows and wealthy vacationers enjoying one of the many 5-star resorts.</p>
             
         </div>
@@ -130,70 +147,123 @@
 
             <h2>The Azores</h2>
 
-            <img src="./images/azores-main.jpg">
+            <img src="./Images/azores-main.jpg">
             <p>The Azores are a major mountain range. The islands rise steeply from shores lined with rocks and pebbles. These mountain ranges can reach heights of 7,713 feet above sea level. These islands are best known for whale and dolphin watching.</p>
             
         </div>
 
         <div class="island-pg hide" id="bali">
             <h2>Bali</h2>
-            <img src="./images/Bali/Bali-Main.jpg">
+            <img src="./Images/Bali-Main.jpg">
             <p>Known as the Island of the Gods, Bali is a tropical paradise that has much to offer! Lush vegetation, ancient temples, magical sunsets, idyllic beaches and some of the best hotels in the world are among the island's most attractive features.</p>
             
         </div>
 
-        <div class="island-pg hide" id="galapagos-islands">
+        <div class="island-pg hide" id="galapagos">
             <h2>Galapagos Islands</h2>
-            <img src="./images/Galapagos/Galapagos-Main.jpg">
+            <img src="./Images/galapagos-main.jpg">
             <p>A trip to the Galapagos Islands is an experience with an abundance of wildlife and a beautiful landscape unlike any other in the world! Whether you seek quiet relaxation or adventurous exploration, these world famous islands have something to offer for all.</p>
             
         </div>
 
         <div class="island-pg hide" id="hawaii">
-            <h2>hawaii</h2>
-            <img src="./images/hawaii - main.webp">
+            <h2>Hawaii</h2>
+            <img src="./Images/hawaii-main.jpg">
             <p> the Hawaiian islands are comprised of 6 major islands to visit with each of them its own unique culture and hertiage. Hawaiian islands also offer a great variety of activites such as surfing on the north shore,shopping on waikiki strip, and also quiet secluded activites in nature on all the islands.</p>
             
         </div>
 
         <div class="island-pg hide" id="maldives">
-            <h2>Maldives</h2>
-            <img src="./images/maldives-main.jpg">
+            <h2>The Maldives</h2>
+            <img src="./Images/maldives-main.jpg">
             <p>The Maldives consists of 1,190 islands located in the Indian Ocean, southwest of India. They offer seclusion, breathtaking ocean views, and the most luxurious overwater villas in the World. Amazing scuba diving, snorkeling, and surfing help make the Maldives a unique and fantastic beach destination.</p>
             
         </div>
 
-        <div class="island-pg hide" id="dalmatian-islands">
-            <h2>Dalmation Islands</h2>
-
-            <img src="./images/">
+        <div class="island-pg hide" id="dalmatian">
+            <h2>Dalmatian Islands</h2>
+            <img src="./Images/dalmatian-main.jpg">
             <p>Dalmatia encompasses Croatia's western border along the Adriatic Sea. Dalmatia features historic cities and mountain towns to tucked-away beaches and sprawling vineyards.</p>
             
         </div>
 
         <div class="island-pg hide" id="aruba">
             <h2>Aruba</h2>
-            <img src="./images/aruba-main.jpg">
+            <img src="./Images/aruba-main.jpg">
             <p>Aruba is one of the three ABC islands in the southern Caribbean, miles off the coast of Venezuela. Aruba is an independent country within the Kingdom of the Netherlands and has a population of approximately 100,000 inhabitants.</p>
             
         </div>
 
-        <div class="island-pg hide" id="isle-of-sky">
+        <div class="island-pg hide" id="isle-of-skye">
 
             <h2>The Isle of Skye</h2>
 
-            <img src="./images/IsleOfSkye/Skye-Main.jpg">
+            <img src="./Images/Skye-Main.jpg">
             <p>The rugged and remote Isle of Skye offers some of Scotland's best scenery and never fails to charm its visitors. Dramatic cliffsides, medieval castles, and picturesque fishing villages </p>
             
         </div>
         <section class="weather" id="weather-dashboard">
-          <button id="display-weather">click here to display 7 day forecast!</button>
+       
         
+          <button id="display-weather" class="js-modal-trigger button is-info is-large" data-city="santorini" data-target="modal-js-weather">
+              Weather forecast
+          </button>
+        </section>
+        <section class="gif" id="gif-dashboard">
 
+          <button id="display-gif" class="js-modal-trigger-gif button is-info is-large" gif-city="island" data-target="modal-js-gif">
+            click me for some Gifs!
+          </button>
         </section>
 
     </main>
-    <script src="script.js"></script>
+   
+<div id="modal-js-weather" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Modal title</p>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <!-- Content ... -->
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button is-success">Done</button>
+      <button class="button">Cancel</button>
+    </footer>
+  </div>
+   </div>
+
+<div id="modal-js-gif" class="modal-gif">
+  <div class="modal-background-gif"></div>
+  <div class="modal-card-gif">
+    <header class="modal-card-head-gif">
+      <p class="modal-card-title-gif">Gifs!</p>
+      <button class="delete-gif" aria-label="close-gif"></button>
+    </header>
+    <section class="modal-card-body-gif">
+      <!-- Content ... -->
+    </section>
+    <footer class="modal-card-foot-gif">
+      <button class="button is-success">Done</button>
+      <button class="button-gif">Cancel</button>
+    </footer>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
+      integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
+      crossorigin="anonymous"
+    ></script>
+<script src="script.js"></script>
 
     
 </body>
