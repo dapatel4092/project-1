@@ -208,11 +208,6 @@ function getGif(gifCity) {
 
 
 
-
-    function loadIsland(island) {
-      var islandName = document.getElementById('islandName');
-      var islandOrigin = document.getElementById('islandOrigin');
-      var islandImage = document.getElementById('island-image');
       
 
 function loadIsland(island) {
@@ -228,7 +223,7 @@ function loadIsland(island) {
 
 
     }
-}
+
 
     function loadImage(island) {
       //var slideshowContainer = document.getElementById('slideshow-container');
@@ -256,15 +251,6 @@ function loadIsland(island) {
   })
       
 
-var islands = document.querySelectorAll('.dropdown-item');
-islands.forEach(function (island) {
-  island.addEventListener('click', function (event) {
-    //console.log(event);
-    var name = this.attributes.href.value;
-    loadIsland(name)
-
-  })
-})
 
     var coolIslands = document.querySelectorAll('.dropdown-item');
     coolIslands.forEach(function(island){island.addEventListener('click',function(event) {
@@ -275,10 +261,7 @@ islands.forEach(function (island) {
 
     function getImage1(uglyName) {
       switch (uglyName) {
-        case "#homepage":
-          return {
-            link: "homepage-1"
-          }
+        
         case "#santorini":
           return {
             link: "santorini-1"
@@ -325,10 +308,7 @@ islands.forEach(function (island) {
 
   function getImage2(uglyName) {
     switch (uglyName) {
-      case "#homepage":
-        return {
-          link: "homepage-2"
-        }
+      
       case "#santorini":
         return {
           link: "santorini-2"
@@ -375,10 +355,7 @@ islands.forEach(function (island) {
 
 function getImage3(uglyName) {
   switch (uglyName) {
-    case "#homepage":
-      return {
-        link: "homepage-3"
-      }
+    
     case "#santorini":
       return {
         link: "santorini-4"
