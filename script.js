@@ -107,14 +107,34 @@ function getForecast(city){
       var islandName = document.getElementById('islandName');
       var islandOrigin = document.getElementById('islandOrigin');
       var islandImage = document.getElementById('island-image');
+      
+
 
       islandName.textContent = getIslandName(island).name;
       islandOrigin.textContent = getIslandName(island).origin;
       console.log(islandImage);
       islandImage.attributes.src.textContent = `./images/${getIslandName(island).link}.jpg`
 
+
+
     }
 
+    function loadImage(island) {
+      //var slideshowContainer = document.getElementById('slideshow-container');
+      
+      var image1 = document.getElementById('image1');
+      var image2 = document.getElementById('image2');
+      var image3 = document.getElementById('image3');
+
+      //slideshowContainer.textContent = get(island).name;
+      
+      image1.attributes.src.textContent = `./images/${getImage1(island).link}.jpg`
+      image2.attributes.src.textContent = `./images/${getImage2(island).link}.jpg`
+      image3.attributes.src.textContent = `./images/${getImage3(island).link}.jpg`
+
+      console.log(islandImage);
+    
+    }
     
     var islands = document.querySelectorAll('.dropdown-item');
     islands.forEach(function(island){island.addEventListener('click', function(event) {
@@ -123,6 +143,164 @@ function getForecast(city){
       loadIsland(name)
 
     })})
+
+    var coolIslands = document.querySelectorAll('.dropdown-item');
+    coolIslands.forEach(function(island){island.addEventListener('click',function(event) {
+      var name = this.attributes.href.value;
+      loadImage(name)
+
+    })})
+
+    function getImage1(uglyName) {
+      switch (uglyName) {
+        case "#homepage":
+          return {
+            link: "homepage-1"
+          }
+        case "#santorini":
+          return {
+            link: "santorini-1"
+          };
+        case "#koh-samui":
+          return {
+            link: "koh-samui-1",
+          };
+        case "#the-azores":
+          return {
+            link: "azores-1"
+          };
+        case "#bali":
+          return {
+            link: "Bali-1"
+          };
+        case "#galapagos":
+          return {
+            link: "Galapagos-2"
+          };
+        case "#hawaii":
+          return {
+            link: "hawaii-1"
+          };
+        case "#maldives":
+          return {
+            link: "maldives-1"
+          };
+        case "#dalmatian":
+          return {
+            link: "dalmation-1"
+          };
+        case "#aruba":
+          return {
+            link: "aruba-1"
+          };
+        case "#isle-of-skye":
+          return {
+            link: "Skye-1"
+          };
+        
+    }
+  }
+
+  function getImage2(uglyName) {
+    switch (uglyName) {
+      case "#homepage":
+        return {
+          link: "homepage-2"
+        }
+      case "#santorini":
+        return {
+          link: "santorini-2"
+        };
+      case "#koh-samui":
+        return {
+          link: "koh-samui-2",
+        };
+      case "#the-azores":
+        return {
+          link: "azores-2"
+        };
+      case "#bali":
+        return {
+          link: "Bali-4"
+        };
+      case "#galapagos":
+        return {
+          link: "Galapagos-3"
+        };
+      case "#hawaii":
+        return {
+          link: "hawaii-2"
+        };
+      case "#maldives":
+        return {
+          link: "maldives-2"
+        };
+      case "#dalmatian":
+        return {
+          link: "dalmation-2"
+        };
+      case "#aruba":
+        return {
+          link: "aruba-2"
+        };
+      case "#isle-of-skye":
+        return {
+          link: "Skye-2"
+        };
+      
+  }
+}
+
+function getImage3(uglyName) {
+  switch (uglyName) {
+    case "#homepage":
+      return {
+        link: "homepage-3"
+      }
+    case "#santorini":
+      return {
+        link: "santorini-4"
+      };
+    case "#koh-samui":
+      return {
+        link: "koh-samui-3",
+      };
+    case "#the-azores":
+      return {
+        link: "azores-4"
+      };
+    case "#bali":
+      return {
+        link: "Bali-3"
+      };
+    case "#galapagos":
+      return {
+        link: "Galapagos-4"
+      };
+    case "#hawaii":
+      return {
+        link: "hawaii-3"
+      };
+    case "#maldives":
+      return {
+        link: "maldives-4"
+      };
+    case "#dalmatian":
+      return {
+        link: "dalmation-3"
+      };
+    case "#aruba":
+      return {
+        link: "aruba-3"
+      };
+    case "#isle-of-skye":
+      return {
+        link: "Skye-3"
+      };
+    
+}
+}
+
 
 function getIslandName(uglyName) {
   switch (uglyName) {
@@ -142,7 +320,7 @@ function getIslandName(uglyName) {
       return {
         name: "Koh Samui",
         origin: "Thailand",
-        link: "koh-samui-1"
+        link: "koh-samui-main"
       };
     case "#the-azores":
       return {
@@ -214,7 +392,11 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-function showSlides(n) {
+function showSlides(n, islandName) {
+  //go through image folder and make simple names island name and #
+  //concatenate islandName + "n" hawaii1
+  //access the image elements (tag them/id)
+  //update images source attribute google src=   .src=./images/+concatenation
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
