@@ -235,13 +235,40 @@ function loadIsland(island) {
 
       //slideshowContainer.textContent = get(island).name;
       
-      image1.attributes.src.textContent = `./images/${getImage1(island).link}.jpg`
-      image2.attributes.src.textContent = `./images/${getImage2(island).link}.jpg`
-      image3.attributes.src.textContent = `./images/${getImage3(island).link}.jpg`
+      image1.attributes.src.textContent = `images/${getImage1(island).link}.jpg`
+      image2.attributes.src.textContent = `images/${getImage2(island).link}.jpg`
+      image3.attributes.src.textContent = `images/${getImage3(island).link}.jpg`
     
       console.log(islandImage);
     
     }
+
+    function loadHomepage(homepage) {
+      var homepage = document.getElementById('homepage');
+
+      var homepageImage1 = document.getElementById('image1');
+      var homepageImage2 = document.getElementById('image2');
+      var homepageImage3 = document.getElementById('image3');
+
+      //slideshowContainer.textContent = get(island).name;
+      
+      image1.attributes.src.textContent = `images/${getHomepageImage1(homepage).link}.jpg`
+      image2.attributes.src.textContent = `images/${getHomepageImage2(homepage).link}.jpg`
+      image3.attributes.src.textContent = `images/${getHomepageImage3(homepage).link}.jpg`
+    
+      
+
+
+
+    }
+
+var homepage = document.querySelectorAll('.dropdown-item');
+  homepage.forEach(function(homepage){homepage.addEventListener('click', function(event) {
+    //console.log(event);
+    var name = this.attributes.href.value;
+    loadHomepage(name)
+  })
+})
     
     var islands = document.querySelectorAll('.dropdown-item');
     islands.forEach(function(island){island.addEventListener('click', function(event) {
@@ -496,7 +523,7 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-function showSlides(n, islandName) {
+function showSlides(n,) {
   //go through image folder and make simple names island name and #
   //concatenate islandName + "n" hawaii1
   //access the image elements (tag them/id)
