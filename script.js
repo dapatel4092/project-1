@@ -229,3 +229,20 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+
+//this adds a click event to the save button for the wishlist
+
+var saveBtnClass = $('.saveBtn');
+var wishListUserInput = document.querySelector("#wishListInput")
+
+wishListUserInput.value = localStorage.getItem("List-Item")
+
+$('.saveBtn').on('click', function() {
+  
+  var text = $(this).siblings("textarea").val()
+  //var wishList = $(this).parent().attr("id")
+  localStorage.setItem("List-Item", text);
+ 
+})
+
