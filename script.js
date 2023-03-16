@@ -154,7 +154,7 @@ function getIslandName(uglyName) {
       return {
         name: "Bali",
         origin: "Indonesia",
-        link: "Bali/Bali-Main"
+        link: "Bali-Main"
       };
     case "#galapagos":
       return {
@@ -190,7 +190,7 @@ function getIslandName(uglyName) {
       return {
         name: "Isle of Skye",
         origin: "Scotland",
-        link: "IsleOfSkye/Skye-Main"
+        link: "Skye-Main"
         };
 
 
