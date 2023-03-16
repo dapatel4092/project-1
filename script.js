@@ -68,11 +68,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // }
 
   // Add a click event on buttons to open a specific modal
-  document.querySelector('.js-modal-trigger-gif').addEventListener("click", (event) => {
+  document.querySelector('.js-modal-trigger').addEventListener("click", (event) => {
     console.log(event.target)
-    const modalg = event.target.dataset.target;
-    const $target = document.getElementById(modalg);
-    console.log($target, "Modal-gif", modalg)
+    const modal = event.target.dataset.target;
+    const $target = document.getElementById(modal);
+    console.log($target, "Modal", modal)
     var gifCity = event.target.dataset.gifCity
     getGif(gifCity)
     //  $trigger.addEventListener('click', () => {
@@ -177,8 +177,7 @@ function islandButtonClickg(event) {
 }
 
 function getGif(gifCity) {
-  var gapiUrl = `
-      https://api.giphy.com/v1/gifs/search?api_key=${gifKey}&q=${gifCity}&limit=5&offset=0&rating=pg&lang=en`
+  var gapiUrl = `https://api.giphy.com/v1/gifs/search?api_key=${gifKey}&q=${gifCity}&limit=5&offset=0&rating=pg&lang=en`
   fetch(gapiUrl)
     .then(response => response.json())
     .then(apiDatag => {
@@ -201,7 +200,9 @@ function getGif(gifCity) {
 
       }
     })
-}
+} 
+
+
 
 
 
