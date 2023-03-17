@@ -219,8 +219,8 @@ function loadIsland(island) {
   islandName.textContent = getIslandName(island).name;
   islandOrigin.textContent = getIslandName(island).origin;
   console.log(islandImage);
-  islandImage.attributes.src.textContent = `./images/${getIslandName(island).link}.jpg`
-
+  islandImage.attributes.src.textContent = `images/${getIslandName(island).link}.jpg`
+  
 
 
     }
@@ -243,33 +243,7 @@ function loadIsland(island) {
     
     }
 
-    function loadHomepage(homepage) {
-      var homepage = document.getElementById('homepage');
 
-      var homepageImage1 = document.getElementById('image1');
-      var homepageImage2 = document.getElementById('image2');
-      var homepageImage3 = document.getElementById('image3');
-
-      //slideshowContainer.textContent = get(island).name;
-      
-      image1.attributes.src.textContent = `images/${getHomepageImage1(homepage).link}.jpg`
-      image2.attributes.src.textContent = `images/${getHomepageImage2(homepage).link}.jpg`
-      image3.attributes.src.textContent = `images/${getHomepageImage3(homepage).link}.jpg`
-    
-      
-
-
-
-    }
-
-var homepage = document.querySelectorAll('.dropdown-item');
-  homepage.forEach(function(homepage){homepage.addEventListener('click', function(event) {
-    //console.log(event);
-    var name = this.attributes.href.value;
-    loadHomepage(name)
-  })
-})
-    
     var islands = document.querySelectorAll('.dropdown-item');
     islands.forEach(function(island){island.addEventListener('click', function(event) {
       //console.log(event);
@@ -288,9 +262,12 @@ var homepage = document.querySelectorAll('.dropdown-item');
 
 
 
-
     function getImage1(uglyName) {
       switch (uglyName) {
+        case "#homepage":
+          return {
+            link: "homepage-1"
+          };
         
         case "#santorini":
           return {
@@ -302,15 +279,15 @@ var homepage = document.querySelectorAll('.dropdown-item');
           };
         case "#the-azores":
           return {
-            link: "azores-1"
+            link: "the-azores-1"
           };
         case "#bali":
           return {
-            link: "Bali-1"
+            link: "bali-1"
           };
         case "#galapagos":
           return {
-            link: "Galapagos-2"
+            link: "galapagos-1"
           };
         case "#hawaii":
           return {
@@ -322,7 +299,7 @@ var homepage = document.querySelectorAll('.dropdown-item');
           };
         case "#dalmatian":
           return {
-            link: "dalmation-1"
+            link: "dalmatian-1"
           };
         case "#aruba":
           return {
@@ -330,7 +307,7 @@ var homepage = document.querySelectorAll('.dropdown-item');
           };
         case "#isle-of-skye":
           return {
-            link: "Skye-1"
+            link: "isle-of-skye-1"
           };
         
     }
@@ -338,7 +315,10 @@ var homepage = document.querySelectorAll('.dropdown-item');
 
   function getImage2(uglyName) {
     switch (uglyName) {
-      
+      case "#homepage":
+        return {
+          link: "homepage-2"
+        };
       case "#santorini":
         return {
           link: "santorini-2"
@@ -349,15 +329,15 @@ var homepage = document.querySelectorAll('.dropdown-item');
         };
       case "#the-azores":
         return {
-          link: "azores-2"
+          link: "the-azores-2"
         };
       case "#bali":
         return {
-          link: "Bali-4"
+          link: "bali-2"
         };
       case "#galapagos":
         return {
-          link: "Galapagos-3"
+          link: "galapagos-2"
         };
       case "#hawaii":
         return {
@@ -369,7 +349,7 @@ var homepage = document.querySelectorAll('.dropdown-item');
         };
       case "#dalmatian":
         return {
-          link: "dalmation-2"
+          link: "dalmatian-2"
         };
       case "#aruba":
         return {
@@ -377,7 +357,7 @@ var homepage = document.querySelectorAll('.dropdown-item');
         };
       case "#isle-of-skye":
         return {
-          link: "Skye-2"
+          link: "isle-of-skye-2"
         };
       
   }
@@ -385,10 +365,13 @@ var homepage = document.querySelectorAll('.dropdown-item');
 
 function getImage3(uglyName) {
   switch (uglyName) {
-    
+    case "#homepage":
+      return {
+        link: "homepage-3"
+      };
     case "#santorini":
       return {
-        link: "santorini-4"
+        link: "santorini-3"
       };
     case "#koh-samui":
       return {
@@ -396,15 +379,15 @@ function getImage3(uglyName) {
       };
     case "#the-azores":
       return {
-        link: "azores-4"
+        link: "the-azores-3"
       };
     case "#bali":
       return {
-        link: "Bali-3"
+        link: "bali-3"
       };
     case "#galapagos":
       return {
-        link: "Galapagos-4"
+        link: "galapagos-3"
       };
     case "#hawaii":
       return {
@@ -412,11 +395,11 @@ function getImage3(uglyName) {
       };
     case "#maldives":
       return {
-        link: "maldives-4"
+        link: "maldives-3"
       };
     case "#dalmatian":
       return {
-        link: "dalmation-3"
+        link: "dalmatian-3"
       };
     case "#aruba":
       return {
@@ -424,7 +407,7 @@ function getImage3(uglyName) {
       };
     case "#isle-of-skye":
       return {
-        link: "Skye-3"
+        link: "isle-of-skye-3"
       };
     
 }
@@ -437,13 +420,13 @@ function getIslandName(uglyName) {
       return {
         name: "Get Ready For An Adventure",
         origin: "Top 10 Island Destinations Worldwide",
-        link: "homepage"
+        link: "homepage-main"
       };
     case "#santorini":
       return {
         name: "Santorini",
         origin: "Greece",
-        link: "santorini"
+        link: "santorini-main"
       };
     case "#koh-samui":
       return {
@@ -455,13 +438,13 @@ function getIslandName(uglyName) {
       return {
         name: "The Azores",
         origin: "Portugal",
-        link: "azores-main"
+        link: "the-azores-main"
       };
     case "#bali":
       return {
         name: "Bali",
         origin: "Indonesia",
-        link: "Bali-Main"
+        link: "bali-main"
       };
     case "#galapagos":
       return {
@@ -497,9 +480,8 @@ function getIslandName(uglyName) {
       return {
         name: "Isle of Skye",
         origin: "Scotland",
-
-        link: "Skye-Main"
-        };
+        link: "isle-of-skye-main"
+      };
 
 
 
