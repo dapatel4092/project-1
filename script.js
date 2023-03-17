@@ -227,13 +227,13 @@ function loadIsland(island) {
 
 
     function loadImage(island) {
-      //var slideshowContainer = document.getElementById('slideshow-container');
+      
       
       var image1 = document.getElementById('image1');
       var image2 = document.getElementById('image2');
       var image3 = document.getElementById('image3');
 
-      //slideshowContainer.textContent = get(island).name;
+      
       
       image1.attributes.src.textContent = `images/${getImage1(island).link}.jpg`
       image2.attributes.src.textContent = `images/${getImage2(island).link}.jpg`
@@ -242,7 +242,6 @@ function loadIsland(island) {
       console.log(islandImage);
     
     }
-
 
     var islands = document.querySelectorAll('.dropdown-item');
     islands.forEach(function(island){island.addEventListener('click', function(event) {
