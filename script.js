@@ -207,8 +207,6 @@ function getGif(gifCity) {
 
 
 
-
-
       
 
 function loadIsland(island) {
@@ -258,6 +256,7 @@ function loadIsland(island) {
     loadImage(name)
   })
 })
+
 
 
 
