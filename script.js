@@ -188,7 +188,7 @@ function getGif(gifCity) {
         gifCard += `<div class= "card-gif">
           <div class = "card-content-gif">
             <div class = "media-gif"
-              <media class = "main-content"> img src = ${content.apiDatag[i].images.url}
+              <media class = "main-content"> img src = ${content.apiDatag[i].image}
             </div>
 
           
