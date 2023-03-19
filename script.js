@@ -163,8 +163,8 @@ dropdown.addEventListener('click', function (event) {
   dropdown.classList.toggle('is-active');
 
 });
-// gif api functions//
-
+// gif api functions wont display gifs,cant figure out how to make them append properly//
+// fixed the visual error we had for the gif modal however now it wont even console log the 5 gif URLS i ended up messing with some of the classes that were targeted from the index into the javascript//
 
 var gifKey = "xpOgvJ3jU5vHaBzkW8YgHN29mZgdxNTU"
 var displayGifs = document.querySelectorAll('.gif')
@@ -188,7 +188,8 @@ function getGif(gifCity) {
         gifCard += `<div class= "card-gif">
           <div class = "card-content-gif">
             <div class = "media-gif"
-              <media class = "main-content"> img src = ${content.apiDatag[i].image}
+              ${apiDatag.list[i].append.gifCity}
+            
             </div>
 
           

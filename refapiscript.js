@@ -1,22 +1,3 @@
-/* 
-
-
-
-   *******
-   api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}   /// 
-   
- const options = {
-	method: 'POST',
-	headers: {
-		'X-RapidAPI-Key': '86a7d58516msh89e2daf596b5b27p158c4bjsned74bb66b743',
-		'X-RapidAPI-Host': 'openweatherapp.p.rapidapi.com'
-	}
-};
-
-fetch('https://openweatherapp.p.rapidapi.com/', options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));  */
 
 
 	var apiKey = "ad0f41660e1acc4acc6a263d5cc5a854"
@@ -38,6 +19,9 @@ function getForecast(city){
 
 
 
+  // gif api key  "xpOgvJ3jU5vHaBzkW8YgHN29mZgdxNTU"
+
+  // gif api URL : `https://api.giphy.com/v1/gifs/search?api_key=${gifKey}&q=${gifCity}&limit=5&offset=0&rating=pg&lang=en
 
 
     
