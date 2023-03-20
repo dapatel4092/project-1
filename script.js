@@ -68,11 +68,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // }
 
   // Add a click event on buttons to open a specific modal
-  document.querySelector('.js-modal-trigger-gif').addEventListener("click", (event) => {
+  document.querySelector('.js-modal-trigger').addEventListener("click", (event) => {
     console.log(event.target)
-    const modalg = event.target.dataset.target;
-    const $target = document.getElementById(modalg);
-    console.log($target, "Modal-gif", modalg)
+    const modal = event.target.dataset.target;
+    const $target = document.getElementById(modal);
+    console.log($target, "Modal", modal)
     var gifCity = event.target.dataset.gifCity
     getGif(gifCity)
     //  $trigger.addEventListener('click', () => {
@@ -163,8 +163,8 @@ dropdown.addEventListener('click', function (event) {
   dropdown.classList.toggle('is-active');
 
 });
-// gif api functions//
-
+// gif api functions wont display gifs,cant figure out how to make them append properly//
+// fixed the visual error we had for the gif modal however now it wont even console log the 5 gif URLS i ended up messing with some of the classes that were targeted from the index into the javascript//
 
 var gifKey = "xpOgvJ3jU5vHaBzkW8YgHN29mZgdxNTU"
 var displayGifs = document.querySelectorAll('.gif')
@@ -177,8 +177,7 @@ function islandButtonClickg(event) {
 }
 
 function getGif(gifCity) {
-  var gapiUrl = `
-      https://api.giphy.com/v1/gifs/search?api_key=${gifKey}&q=${gifCity}&limit=5&offset=0&rating=pg&lang=en`
+  var gapiUrl = `https://api.giphy.com/v1/gifs/search?api_key=${gifKey}&q=${gifCity}&limit=5&offset=0&rating=pg&lang=en`
   fetch(gapiUrl)
     .then(response => response.json())
     .then(apiDatag => {
@@ -189,7 +188,8 @@ function getGif(gifCity) {
         gifCard += `<div class= "card-gif">
           <div class = "card-content-gif">
             <div class = "media-gif"
-              <media class = "main-content"> img src = ${content.apiDatag[i].images.url}
+              ${apiDatag.list[i].append.gifCity}
+            
             </div>
 
           
@@ -201,7 +201,7 @@ function getGif(gifCity) {
 
       }
     })
-}
+} 
 
 
 
@@ -224,30 +224,30 @@ function loadIsland(island) {
   islandWelcome.textContent = getIslandName(island).welcome;
   islandOrigin2.textContent = getIslandName(island).origin2;
   console.log(islandImage);
-  islandImage.attributes.src.textContent = `./images/${getIslandName(island).link}.jpg`
-
+  islandImage.attributes.src.textContent = `images/${getIslandName(island).link}.jpg`
+  
 
 
     }
 
 
-    function loadImage(island) {
-      //var slideshowContainer = document.getElementById('slideshow-container');
+    function loadImage(photos) {
+      
       
       var image1 = document.getElementById('image1');
       var image2 = document.getElementById('image2');
       var image3 = document.getElementById('image3');
 
-      //slideshowContainer.textContent = get(island).name;
       
-      image1.attributes.src.textContent = `./images/${getImage1(island).link}.jpg`
-      image2.attributes.src.textContent = `./images/${getImage2(island).link}.jpg`
-      image3.attributes.src.textContent = `./images/${getImage3(island).link}.jpg`
-
-      console.log(islandImage);
+      
+      image1.attributes.src.textContent = `images/${getImage1(photos).link}.jpg`
+      image2.attributes.src.textContent = `images/${getImage2(photos).link}.jpg`
+      image3.attributes.src.textContent = `images/${getImage3(photos).link}.jpg`
+    
+      console.log(photosLoadImage);
     
     }
-    
+
     var islands = document.querySelectorAll('.dropdown-item');
     islands.forEach(function(island){island.addEventListener('click', function(event) {
       //console.log(event);
@@ -255,18 +255,24 @@ function loadIsland(island) {
       loadIsland(name)
     })
   })
-      
+ 
+  var islands = document.querySelectorAll('.dropdown-item');
+  islands.forEach(function(island){island.addEventListener('click', function(event) {
+    //console.log(event);
+    var name = this.attributes.href.value;
+    loadImage(name)
+  })
+})
 
 
-    var coolIslands = document.querySelectorAll('.dropdown-item');
-    coolIslands.forEach(function(island){island.addEventListener('click',function(event) {
-      var name = this.attributes.href.value;
-      loadImage(name)
 
-    })})
 
     function getImage1(uglyName) {
       switch (uglyName) {
+        case "#homepage":
+          return {
+            link: "homepage-1"
+          };
         
         case "#santorini":
           return {
@@ -278,15 +284,15 @@ function loadIsland(island) {
           };
         case "#the-azores":
           return {
-            link: "azores-1"
+            link: "the-azores-1"
           };
         case "#bali":
           return {
-            link: "Bali-1"
+            link: "bali-1"
           };
         case "#galapagos":
           return {
-            link: "Galapagos-2"
+            link: "galapagos-1"
           };
         case "#hawaii":
           return {
@@ -298,7 +304,7 @@ function loadIsland(island) {
           };
         case "#dalmatian":
           return {
-            link: "dalmation-1"
+            link: "dalmatian-1"
           };
         case "#aruba":
           return {
@@ -306,7 +312,7 @@ function loadIsland(island) {
           };
         case "#isle-of-skye":
           return {
-            link: "Skye-1"
+            link: "isle-of-skye-1"
           };
         
     }
@@ -314,7 +320,10 @@ function loadIsland(island) {
 
   function getImage2(uglyName) {
     switch (uglyName) {
-      
+      case "#homepage":
+        return {
+          link: "homepage-2"
+        };
       case "#santorini":
         return {
           link: "santorini-2"
@@ -325,15 +334,15 @@ function loadIsland(island) {
         };
       case "#the-azores":
         return {
-          link: "azores-2"
+          link: "the-azores-2"
         };
       case "#bali":
         return {
-          link: "Bali-4"
+          link: "bali-2"
         };
       case "#galapagos":
         return {
-          link: "Galapagos-3"
+          link: "galapagos-2"
         };
       case "#hawaii":
         return {
@@ -345,7 +354,7 @@ function loadIsland(island) {
         };
       case "#dalmatian":
         return {
-          link: "dalmation-2"
+          link: "dalmatian-2"
         };
       case "#aruba":
         return {
@@ -353,7 +362,7 @@ function loadIsland(island) {
         };
       case "#isle-of-skye":
         return {
-          link: "Skye-2"
+          link: "isle-of-skye-2"
         };
       
   }
@@ -361,10 +370,13 @@ function loadIsland(island) {
 
 function getImage3(uglyName) {
   switch (uglyName) {
-    
+    case "#homepage":
+      return {
+        link: "homepage-3"
+      };
     case "#santorini":
       return {
-        link: "santorini-4"
+        link: "santorini-3"
       };
     case "#koh-samui":
       return {
@@ -372,15 +384,15 @@ function getImage3(uglyName) {
       };
     case "#the-azores":
       return {
-        link: "azores-4"
+        link: "the-azores-3"
       };
     case "#bali":
       return {
-        link: "Bali-3"
+        link: "bali-3"
       };
     case "#galapagos":
       return {
-        link: "Galapagos-4"
+        link: "galapagos-3"
       };
     case "#hawaii":
       return {
@@ -388,11 +400,11 @@ function getImage3(uglyName) {
       };
     case "#maldives":
       return {
-        link: "maldives-4"
+        link: "maldives-3"
       };
     case "#dalmatian":
       return {
-        link: "dalmation-3"
+        link: "dalmatian-3"
       };
     case "#aruba":
       return {
@@ -400,7 +412,7 @@ function getImage3(uglyName) {
       };
     case "#isle-of-skye":
       return {
-        link: "Skye-3"
+        link: "isle-of-skye-3"
       };
     
 }
@@ -531,7 +543,7 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-function showSlides(n, islandName) {
+function showSlides(n,) {
   //go through image folder and make simple names island name and #
   //concatenate islandName + "n" hawaii1
   //access the image elements (tag them/id)
