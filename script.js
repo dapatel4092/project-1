@@ -425,7 +425,7 @@ function getIslandName(uglyName) {
       return {
         name: "Get Ready For An Adventure",
         //origin: "Top 10 Island Destinations Worldwide",
-        link: "homepage",
+        link: "homepage-main",
         description: "This is the homepage",
         welcome: "Your Island Vacation Awaits!",
         origin2: "Top 10 Island Destinations Around the World"
@@ -434,7 +434,7 @@ function getIslandName(uglyName) {
       return {
         name: "Santorini",
         //origin: "Greece",
-        link: "santorini",
+        link: "santorini-main",
         description: "A fantastic island found in the Aegean Sea, Santorini is best known for its volcanic scenery and world-class sunsets. Dazzling blue waters, quaint fishing villages, and dramatic cliffsides are just a few of the features this island has to offer vacations around the world.",
         welcome: "Welcome to Santorini!",
         origin2: "Greece"
@@ -461,7 +461,7 @@ function getIslandName(uglyName) {
       return {
         name: "Bali",
         //origin: "Indonesia",
-        link: "Bali-Main",
+        link: "bali-main",
         description: "Known as the Island of the Gods, Bali is a tropical paradise that has much to offer! Lush vegetation, ancient temples, magical sunsets, idyllic beaches and some of the best hotels in the world are among the island's most attractive features.",
         welcome: "Welcome to Bali!",
         origin2: "Indonesia"
@@ -515,7 +515,7 @@ function getIslandName(uglyName) {
       return {
         name: "Isle of Skye",
         //origin: "Scotland",
-        link: "Skye-Main",
+        link: "isle-of-skye-main",
         description: "The rugged and remote Isle of Skye offers some of Scotland's best scenery and never fails to charm its visitors. Dramatic cliffsides, medieval castles, and picturesque fishing villages",
         welcome: "Welcome to The Isle of Skye!",
         origin2: "Scotland"
