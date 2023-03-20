@@ -213,10 +213,16 @@ function getGif(gifCity) {
 function loadIsland(island) {
   var islandName = document.getElementById('islandName');
   var islandOrigin = document.getElementById('islandOrigin');
+  var islandOrigin2 = document.getElementById('origin');
   var islandImage = document.getElementById('island-image');
+  var islandInfo = document.getElementById('islandInfo');
+  var islandWelcome = document.getElementById('islandWelcome');
 
   islandName.textContent = getIslandName(island).name;
   islandOrigin.textContent = getIslandName(island).origin;
+  islandInfo.textContent = getIslandName(island).description;
+  islandWelcome.textContent = getIslandName(island).welcome;
+  islandOrigin2.textContent = getIslandName(island).origin2;
   console.log(islandImage);
   islandImage.attributes.src.textContent = `./images/${getIslandName(island).link}.jpg`
 
@@ -406,69 +412,101 @@ function getIslandName(uglyName) {
     case "#homepage":
       return {
         name: "Get Ready For An Adventure",
-        origin: "Top 10 Island Destinations Worldwide",
-        link: "homepage"
+        //origin: "Top 10 Island Destinations Worldwide",
+        link: "homepage",
+        description: "This is the homepage",
+        welcome: "Your Island Vacation Awaits!",
+        origin2: "Top 10 Island Destinations Around the World"
       };
     case "#santorini":
       return {
         name: "Santorini",
-        origin: "Greece",
-        link: "santorini"
+        //origin: "Greece",
+        link: "santorini",
+        description: "A fantastic island found in the Aegean Sea, Santorini is best known for its volcanic scenery and world-class sunsets. Dazzling blue waters, quaint fishing villages, and dramatic cliffsides are just a few of the features this island has to offer vacations around the world.",
+        welcome: "Welcome to Santorini!",
+        origin2: "Greece"
       };
     case "#koh-samui":
       return {
         name: "Koh Samui",
-        origin: "Thailand",
-        link: "koh-samui-main"
+        //origin: "Thailand",
+        link: "koh-samui-main",
+        description: "This breathtaking island has beautiful beaches, spectacular viewpoints, waterfalls, temples and several world class spas. It has a wide range of visitors, from people trying to stay on a budget in bungalows and wealthy vacationers enjoying one of the many 5-star resorts.",
+        welcome: "Welcome to Koh Samui!",
+        origin2: "Thailand"
       };
     case "#the-azores":
       return {
         name: "The Azores",
-        origin: "Portugal",
-        link: "azores-main"
+       // origin: "Portugal",
+        link: "azores-main",
+        description: "The Azores are a major mountain range. The islands rise steeply from shores lined with rocks and pebbles. These mountain ranges can reach heights of 7,713 feet above sea level. These islands are best known for whale and dolphin watching.",
+        welcome: "Welcome to The Azores!",
+        origin2: "Portugal"
       };
     case "#bali":
       return {
         name: "Bali",
-        origin: "Indonesia",
-        link: "Bali-Main"
+        //origin: "Indonesia",
+        link: "Bali-Main",
+        description: "Known as the Island of the Gods, Bali is a tropical paradise that has much to offer! Lush vegetation, ancient temples, magical sunsets, idyllic beaches and some of the best hotels in the world are among the island's most attractive features.",
+        welcome: "Welcome to Bali!",
+        origin2: "Indonesia"
       };
     case "#galapagos":
       return {
         name: "Galapagos Islands",
-        origin: "Ecuador",
-        link: "galapagos-main"
+        //origin: "Ecuador",
+        link: "galapagos-main",
+        description: "A trip to the Galapagos Islands is an experience with an abundance of wildlife and a beautiful landscape unlike any other in the world! Whether you seek quiet relaxation or adventurous exploration, these world famous islands have something to offer for all.",
+        welcome: "Welcome to The Galapagos!",
+        origin2: "Ecuador"
       };
     case "#hawaii":
       return {
         name: "Hawaii",
-        origin: "United States",
-        link: "hawaii-main"
+        //origin: "United States",
+        link: "hawaii-main",
+        description: "the Hawaiian islands are comprised of 6 major islands to visit with each of them its own unique culture and hertiage. Hawaiian islands also offer a great variety of activites such as surfing on the north shore,shopping on waikiki strip, and also quiet secluded activites in nature on all the islands.",
+        welcome: "Welcome to Hawaii!",
+        origin2: "Pacific Ocean, USA"
       };
     case "#maldives":
       return {
         name: "The Maldives",
-        origin: "Southeast Asia",
-        link: "maldives-main"
+        //origin: "Southeast Asia",
+        link: "maldives-main",
+        description: "The Maldives consists of 1,190 islands located in the Indian Ocean, southwest of India. They offer seclusion, breathtaking ocean views, and the most luxurious overwater villas in the World. Amazing scuba diving, snorkeling, and surfing help make the Maldives a unique and fantastic beach destination.",
+        welcome: "Welcome to The Maldives!",
+        origin2: "Southeast Asia"
       };
     case "#dalmatian":
       return {
         name: "Dalmatian Islands",
-        origin: "Croatia",
-        link: "dalmatian-main"
+        //origin: "Croatia",
+        link: "dalmatian-main",
+        description: "Dalmatia encompasses Croatia's western border along the Adriatic Sea. Dalmatia features historic cities and mountain towns to tucked-away beaches and sprawling vineyards.",
+        welcome: "Welcome to The Dalmatian Islands!",
+        origin2: "Croatia"
       };
     case "#aruba":
       return {
         name: "Aruba",
-        origin: "Caribbean Sea",
-        link: "aruba-main"
+       // origin: "Caribbean Sea",
+        link: "aruba-main",
+        description: "Aruba is one of the three ABC islands in the southern Caribbean, miles off the coast of Venezuela. Aruba is an independent country within the Kingdom of the Netherlands and has a population of approximately 100,000 inhabitants.",
+        welcome: "Welcome to Aruba!",
+        origin2: "Caribbean Sea"
       };
     case "#isle-of-skye":
       return {
         name: "Isle of Skye",
-        origin: "Scotland",
-
-        link: "Skye-Main"
+        //origin: "Scotland",
+        link: "Skye-Main",
+        description: "The rugged and remote Isle of Skye offers some of Scotland's best scenery and never fails to charm its visitors. Dramatic cliffsides, medieval castles, and picturesque fishing villages",
+        welcome: "Welcome to The Isle of Skye!",
+        origin2: "Scotland"
         };
 
 
