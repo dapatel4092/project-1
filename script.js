@@ -212,14 +212,14 @@ function getGif(gifCity) {
 
 function loadIsland(island) {
   var islandName = document.getElementById('islandName');
-  var islandOrigin = document.getElementById('islandOrigin');
+  //var islandOrigin = document.getElementById('islandOrigin');
   var islandOrigin2 = document.getElementById('origin');
   var islandImage = document.getElementById('island-image');
   var islandInfo = document.getElementById('islandInfo');
   var islandWelcome = document.getElementById('islandWelcome');
 
   islandName.textContent = getIslandName(island).name;
-  islandOrigin.textContent = getIslandName(island).origin;
+  //islandOrigin.textContent = getIslandName(island).origin;
   islandInfo.textContent = getIslandName(island).description;
   islandWelcome.textContent = getIslandName(island).welcome;
   islandOrigin2.textContent = getIslandName(island).origin2;
