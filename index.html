@@ -30,12 +30,13 @@
                   </button>
                 </div>
                 <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                  <div class="dropdown-content">
+                  <div class="dropdown-content island-pg">
+
+                    <a class="dropdown-item"></a>
+                    
                     <a href="#homepage" class="dropdown-item " >
                       Homepage
-                    </a>
-
-                    <a class="dropdown-item"></a>             
+                    </a>             
                     
                     <a href="#santorini" data-city="santorini" gif-city="Santorini" class="dropdown-item island-weather gif">
 
@@ -70,6 +71,7 @@
                     <a href="#isle-of-skye"data-city="Portree" gif-city="Scotland"  class="dropdown-item island-weather gif">
                       Isle of Skye
                     </a>
+                  
                   </div>
                 </div>
               </div>
@@ -77,31 +79,36 @@
         </div>
 
         <div class="island-pg" id="homepage">
+          
             <div class="island-name">
               <h1 id="islandName">Get Ready For An Adventure</h1>
               <h2 id="islandOrigin">Top 10 Island Destinations Worldwide</h2>
             </div>
-            <img id="island-image" src="./Images/homepage.jpg" class="images">
+
+            <img id="island-image" src="images/homepage-main.jpg" class="images">
+
             <aside class="aside">
+              <div class="welcomeText" id="islandWelcome">Your Island Vacation Awaits! </div>
+              <div id="origin">Top 10 Island Destinations Around the World</div>
               <!-- Slideshow container -->
-<div class="slideshow-container">
+  <div class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
     <div class="numbertext">1 / 3</div>
-    <img id="image1" src="" class="slideshow-image" style="width:100%">
+    <img id="image1" src="images/homepage-1.jpg" class="slideshow-image" style="width:100%">
     <div class="text"></div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img id="image2" src="" class="slideshow-image" style="width:100%">
+    <img id="image2" src="images/homepage-2.jpg" class="slideshow-image" style="width:100%">
     <div class="text"></div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <img id="image3" src="" class="slideshow-image" style="width:100%">
+    <img id="image3" src="images/homepage-3.jpg" class="slideshow-image" style="width:100%">
     <div class="text"></div>
   </div>
 
@@ -118,27 +125,32 @@
   <span class="dot" onclick="currentSlide(3)"></span>
 </div>
               
-              <div class="welcomeText"></div>
-              <div class="islandText"></div>
+              <div class="islandText" id="islandInfo">Choose any island from the dropdown menu to begin!</div>
             </aside>
 
         </div>
 
         <div class="island-pg hide" id="homepage">
             <h2>Get Ready For An Adventure</h2>
-            <img src="./Images/homepage.jpg">
+
+            <img src="">
+
             <p>Top 10 Island Destinations Worldwide</p>
         </div>
 
         <div class="island-pg hide" id="santorini">
             <h2>Santorini</h2>
-            <img src="./Images/Santorini.jpg">
+
+            <img src="">
+
             <p>Santorini has become one of the most popular island destinations worldwide.</p>
         </div>
 
         <div class="island-pg hide" id="koh-samui">
             <h2>Koh Samui</h2>
-            <img src="./Images/koh-samui-main.jpg">
+
+            <img src="">
+
             <p>This breathtaking island has beautiful beaches, spectacular viewpoints, waterfalls, temples and several world class spas. It has a wide range of visitors, from people trying to stay on a budget in bungalows and wealthy vacationers enjoying one of the many 5-star resorts.</p>
             
         </div>
@@ -147,49 +159,63 @@
 
             <h2>The Azores</h2>
 
-            <img src="./Images/azores-main.jpg">
+
+            <img src="">
+
             <p>The Azores are a major mountain range. The islands rise steeply from shores lined with rocks and pebbles. These mountain ranges can reach heights of 7,713 feet above sea level. These islands are best known for whale and dolphin watching.</p>
             
         </div>
 
         <div class="island-pg hide" id="bali">
             <h2>Bali</h2>
-            <img src="./Images/Bali-Main.jpg">
+
+            <img src="">
+
             <p>Known as the Island of the Gods, Bali is a tropical paradise that has much to offer! Lush vegetation, ancient temples, magical sunsets, idyllic beaches and some of the best hotels in the world are among the island's most attractive features.</p>
             
         </div>
 
         <div class="island-pg hide" id="galapagos">
             <h2>Galapagos Islands</h2>
-            <img src="./Images/galapagos-main.jpg">
+
+            <img src="">
+
             <p>A trip to the Galapagos Islands is an experience with an abundance of wildlife and a beautiful landscape unlike any other in the world! Whether you seek quiet relaxation or adventurous exploration, these world famous islands have something to offer for all.</p>
             
         </div>
 
         <div class="island-pg hide" id="hawaii">
             <h2>Hawaii</h2>
-            <img src="./Images/hawaii-main.jpg">
+
+            <img src="">
+
             <p> the Hawaiian islands are comprised of 6 major islands to visit with each of them its own unique culture and hertiage. Hawaiian islands also offer a great variety of activites such as surfing on the north shore,shopping on waikiki strip, and also quiet secluded activites in nature on all the islands.</p>
             
         </div>
 
         <div class="island-pg hide" id="maldives">
             <h2>The Maldives</h2>
-            <img src="./Images/maldives-main.jpg">
+
+            <img src="">
+
             <p>The Maldives consists of 1,190 islands located in the Indian Ocean, southwest of India. They offer seclusion, breathtaking ocean views, and the most luxurious overwater villas in the World. Amazing scuba diving, snorkeling, and surfing help make the Maldives a unique and fantastic beach destination.</p>
             
         </div>
 
         <div class="island-pg hide" id="dalmatian">
             <h2>Dalmatian Islands</h2>
-            <img src="./Images/dalmatian-main.jpg">
+
+            <img src="">
+
             <p>Dalmatia encompasses Croatia's western border along the Adriatic Sea. Dalmatia features historic cities and mountain towns to tucked-away beaches and sprawling vineyards.</p>
             
         </div>
 
         <div class="island-pg hide" id="aruba">
             <h2>Aruba</h2>
-            <img src="./Images/aruba-main.jpg">
+
+            <img src="">
+
             <p>Aruba is one of the three ABC islands in the southern Caribbean, miles off the coast of Venezuela. Aruba is an independent country within the Kingdom of the Netherlands and has a population of approximately 100,000 inhabitants.</p>
             
         </div>
@@ -198,7 +224,9 @@
 
             <h2>The Isle of Skye</h2>
 
-            <img src="./Images/Skye-Main.jpg">
+
+            <img src="">
+
             <p>The rugged and remote Isle of Skye offers some of Scotland's best scenery and never fails to charm its visitors. Dramatic cliffsides, medieval castles, and picturesque fishing villages </p>
             
         </div>
@@ -235,7 +263,7 @@
   </div>
    </div>
 
-<div id="modal-js-gif" class="modal-gif">
+<div id="modal-js-gif" class="modal">
   <div class="modal-background-gif"></div>
   <div class="modal-card-gif">
     <header class="modal-card-head-gif">
